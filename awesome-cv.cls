@@ -576,6 +576,20 @@
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }
+
+%% Define an entry of cv information
+%% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cventrynew}[4]{%
+	\setlength\tabcolsep{0pt}
+	\setlength{\extrarowheight}{0pt}
+	\vspace{-2.0mm}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+		\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+		\entrypositionstyle{#1} & \entrydatestyle{#4} \\
+	\end{tabular*}%
+	
+}
+
 % Define a subentry of cv information
 % Usage: \cvsubentry{<position>}{<title>}{<date>}{<description>}
 \newcommand*{\cvsubentry}[4]{%
@@ -628,6 +642,12 @@
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+}
+
+% Define a line of cv information(skill)
+% Usage: \cvself{<type>}{<skillset>}
+\newcommand*{\cvself}[1]{%
+	\skillsetstyle{#1}
 }
 
 % Define an environment for cvitems(for cventry)
