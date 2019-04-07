@@ -563,6 +563,18 @@
   \end{center}
 }
 
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cventrycompany}[2]{%
+	\vspace{-2.0mm}
+	\setlength\tabcolsep{0pt}
+	\setlength{\extrarowheight}{0pt}
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+		\entrytitlestyle{#1} & \entrylocationstyle{#2}
+	\end{tabular*}%
+}
+
+
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
@@ -581,15 +593,14 @@
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventrynewaa}[5]{%
+\newcommand*{\cventryproject}[4]{%
 	\vspace{-2.0mm}
 	\setlength\tabcolsep{0pt}
 	\setlength{\extrarowheight}{0pt}
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-		\ifempty{#2#3}
-		{\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-		{\entrytitlestyle{#2} & \entrylocationstyle{#3} \\}
-		\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+		\entrypositionstyle{#1} & \entrydatestyle{#2} \\
+		\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}} \\
+		\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#4}}
 	\end{tabular*}%
 }
 

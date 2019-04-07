@@ -12,36 +12,55 @@
 
 %------------------------------------------------
 
-\cventry
-{游戏开发工程师~~~游戏引擎开发组} % Job title
-{杭州无端科技股份有限公司} % Organization
+\cventrycompany
+{杭州无端科技股份有限公司~~~游戏开发工程师} % Organization
 {杭州,浙江} % Location
-{5月~ 2017 - 今} % Date(s)
+
+\cventryproject
+{生死狙击2项目组} % Job title
+{3月~ 2018 - 今} % Date(s)
+% 什么是ECS， 为什么采用ECS
+{生死狙击2是一款FPS端游，包括了吃鸡模式和传统模式。游戏的客户端和服务器采用Unity3D游戏引擎及采用ECS框架的Entitas进行开发。}
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {负责基于Unity3D引擎和Entitas框架的FPS端游的角色动画系统的开发和维护，主要包括动画逻辑状态机，Avatar系统，UnityIK，角色碰撞胶囊体趴下}
-\item {实现基于开源页游引擎Away3D的AwayBuilder场景编辑器的角色动作查看器，主要工作包括修改引擎从左手系改成右手系，DAE文件支持，挂载，动画映射等动作查看器需求}
-\item {负责页游粒子特效库(基于Flare3D)的维护和开发，包括新特性，特效库性能优化等}
+\item {负责角色动画系统的开发和维护。主要内容包括基于Unity3D动画状态机的游戏内部逻辑动画状态机开发和设计,内部状态机支持动画的过渡、融合、切换、打断、动画事件回调、动画网络同步和回放。熟悉使用
+	Unity3D的IK和Avatar系统。}
+% 跳跃碰到障碍物处理，跳跃空中按wad轻微添加移动，碰到障碍物处理，斜面检测，自定义算法，检测边缘和台阶。
+\item{负责角色移动模块的开发。包括跳跃移动、角色站在地面超过一定角度下滑、站立移动、趴下移动、游泳移动和潜水移动。}
+% 旋转
+\item{角色动画骨骼后处理模块。角色左倾和右倾、枪随手旋转而旋转、角色上半身稳定、瞄准对齐。}
+\item{负责角色自定义碰撞胶囊体开发。游戏默认的碰撞胶囊体是朝向y轴，采用自定义的碰撞检测和移动算法，支持碰撞胶囊体朝向x,z轴，能够正确沿着x,y轴旋转并且碰撞胶囊体碰到障碍物自动停止旋转，符合预期移动。自定义碰撞胶囊体应用于趴下、潜水和游泳移动。}
 \end{cvitems}
 }
-
 %------------------------------------------------
 
-\cventrynewaa
-{游戏开发工程师~~~游戏引擎开发组} % Job title
-{杭州无端科技股份有限公司} % Organization
-{杭州,浙江} % Location
-{5月~ 2017 - 今} % Date(s)
+\cventryproject
+{生死狙击1项目组} % Organization
+{4月~ 2017 - 3月~ 2018} % Location
+{骨骼动画查看器是一款基于开源页游引擎Away3D的AwayBuilder场景编辑器修改而成的动画查看器，支持导入查看DAE骨骼动画、武器和角色绑定、导入查看游戏场景，导入查看游戏粒子特效(基于粒子特效库Flare3D)。该工具极大提高了美术的开发效率。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
-		\item {负责基于Unity3D引擎和Entitas框架的FPS端游的角色动画系统的开发和维护，主要包括动画逻辑状态机，Avatar系统，UnityIK，角色碰撞胶囊体趴下}
-		\item {实现基于开源页游引擎Away3D的AwayBuilder场景编辑器的角色动作查看器，主要工作包括修改引擎从左手系改成右手系，DAE文件支持，挂载，动画映射等动作查看器需求}
-		\item {负责页游粒子特效库(基于Flare3D)的维护和开发，包括新特性，特效库性能优化等}
+		% 
+		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
+		\item {主要工作包括将away3D引擎从默认的左手系改成右手系(含投影矩阵，DAE顶点数据，agal代码等)，修复away3D骨骼动画bug,添加武器和角色绑定、功能场景解析导入、lightmap、PVS、遮挡剔除和雾特效。}
+		% 性能优化，agal 代码缓存
+		\item {负责页游粒子特效库(基于Flare3D)的维护和开发，包括粒子特效新特性，特效库性能优化等}
 	\end{cvitems}
 }
-
 %------------------------------------------------    
-
+\cventryproject
+{生死狙击1项目组} % Organization
+{12月~ 2017 - 1月~ 2018} % Location
+{粒子特效转换工具。支持大部分页游粒子特效转换成Unity3D的粒子特效。节省了美术的制作成本。}
+{ % Description(s) of tasks/responsibilities
+	\begin{cvitems}
+		% 
+		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
+		\item {负责转换工具的开发。主要内容包括页游粒子特效的解析，粒子坐标转换(Flare3D库粒子发射器方向为Y轴，Unity3D粒子发射器方向为Z轴)，粒子生命周期匹配，粒子发射器和发射方向匹配，粒子特效匹配(UV特效，Size特效，SpriteSheet特效等)。}
+		% 性能优化，agal 代码缓存
+	\end{cvitems}
+}
+%------------------------------------------------ 
 \cventry
 {软件开发工程师~~~实习} % Job title
 {上海立时飞讯有限公司} % Organization
@@ -65,11 +84,11 @@
 {5月 2015 - 8月 2015} % Date(s)
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {参与了部门iFind windows客户端的开发。为产品iFind里的行情模块修复超过30个bug。}
+\item {参与部门iFind windows客户端的开发。为产品iFind里的行情模块修复超过30个bug。}
 \item {负责编写节点过滤器,对于普通用户过滤掉高级用户的功能和菜单。}
 \end{cvitems} 
 }
 
-%------------------------------------------------
-
 \end{cventries}
+
+%------------------------------------------------
