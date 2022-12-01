@@ -16,7 +16,7 @@
 \cventryproject
 {Project SH} % Job title
 {10月~ 2021 - 11月~ 2022} % Date(s)
-{PJSH是一个以现代亚洲都市为背景的开放世界游戏。游戏以第三人称动作设计为基础，拓展多样游乐场式的玩法体验。PJSH使用UE4 引擎，业务逻辑代码使用C++。本人主要负责战斗系统的开发和维护。}
+{PJSH是一个以现代亚洲都市为背景的开放世界TPS射击游戏。PJSH使用UE4引擎，业务逻辑代码使用C++。本人主要负责战斗系统的开发和维护。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
 		% 技能节点类似守望先锋，包含 Entry，Condition，Action 和 State 节点
@@ -28,14 +28,14 @@
 		% Skill Info Context， 队友技能P
 		% 属性系统， add， set， override， 支持add multi，加成P
 		% 技能同步是怎么实现的，有二个版本，第一个是客户端和服务器运行技能图，Simulate 短不会跑整个技能图，对于 Simulate 端，同步的粒度是以节点为颗粒度的。因为 simulate 端不跑技能的执行流，所以执行的时候，服务器还会提供节点执行的上下文信息。
-		\item {\textbf{负责技能系统的开发和维护}。技能系统通过技能编辑器(工具组开发)用类似蓝图编辑的方式制作节点技能图，技能图包含数据流和执行流，策划可以通过配置节点来实现所有的角色技能和怪物技能。本人主要负责开发和维护技能架构、技能节点(开发的节点超过180个)、Buff系统和属性系统。 }
+		\item {\textbf{负责技能系统的开发和维护}。技能系统通过技能图组织整个技能流程。本人主要负责开发和维护技能架构、技能同步、技能节点(超过180个)、Buff系统和属性系统。 }
 		% jinja2
-		\item{\textbf{节点自动生成工具}。因为技能节点铺量，为了减少大量重复性劳动，开发节点自动生成工具。通过解析节点定义配置的proto，使用脚本自动生成节点框架代码，自动数据节点的组织和客户端服务器同步代码，使得开发效率大幅度提升，该工具在组内广泛应用。}
+		\item{\textbf{节点自动生成工具}。Python脚本解析节点定义的proto文件，用Jinja2模板语言自动生成Runtime的节点C++代码，主要包括节点类和同步相关代码。其他程序只需要定义proto并实现接口即可添加节点。}
 		% 旋转
 		% 优化， FVarint 优化
 		% 内存优化， 注册 Delegate，存放在技能组件里，大部分情况都是用不到，使用 Module，能够动态加载
 		% 尽量改成事件驱动。技能在不在运行的时候，把 Tick 关掉。    
-		\item{\textbf{Gameplay业务功能相关开发}。开发游戏核心特色玩法:元素反应系统、超能力时间缓速功能等。}
+		\item{\textbf{Gameplay业务功能相关开发}。开发游戏核心特色玩法:化学反应系统、超能力时间缓速功能(TimeScale)等。}
 	\end{cvitems}
 }
 
@@ -51,16 +51,16 @@
 \cventryproject
 {F工作室H69} % Job title
 {6月~ 2019 - 7月~ 2021} % Date(s)
-{光明大陆2是一款北欧神话题材的西方魔幻MMO游戏，游戏服务器使用BigWorld，客户端使用Neox，脚本层使用Python编写。本人作为战斗负责人负责游戏战斗模块的开发和维护。}
+{光明大陆2是一款北欧神话题材的西方魔幻MMOARPG游戏，服务器使用BigWorld，客户端Neox，脚本Python。本人作为战斗负责人负责游戏战斗模块的开发和维护。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
-		\item {\textbf{负责技能系统的开发和维护}。技能系统用类似蓝图编辑的方式制作技能节点图，策划根据程序提供的各种功能节点，可以自由配置节点和节点之间的触发关系。主要开发了开发技能节点，技能客户端服务器同步、技能状态、状态互斥、符文系统等。策划使用这套技能系统配置了超过\textbf{1500}个技能，能满足策划大部分技能配置需求。}
+		\item {\textbf{负责技能系统的开发和维护}。技能系统用类似蓝图编辑的方式制作技能节点图。主要开发了技能图架构、技能同步、符文系统，开发和维护技能Buff、状态互斥等。策划使用这套技能系统配置了超过\textbf{1500}个技能，能满足策划大部分技能配置需求。}
 		% jinja2
-		\item{\textbf{技能编辑器开发和维护}。技能编辑器主要用于策划配置技能。除了基础的技能配置和编辑功能，为了提高开发效率开发了有特效预览、技能热同步、技能模板、静态数据检查、自动化生成节点文档等。相比游戏中的其他编辑器，用户体验更好。}
+		\item{\textbf{技能编辑器开发和维护}。基于Sunshine UI框架开发节点编辑器，嵌入游戏Runtime窗口，通过RPC协议实现编辑器和游戏通讯。编辑器支持支持特效预览、技能热同步、技能模板、静态数据检查、用Jinja2自动化生成节点文档。编辑器使用得到策划好评。}
 		% 旋转
 		%\item{技能性能优化。对技能性能进行性能优化，流量优化，手感优化。技能系统和未优化前相比，技能系统整体性能提升20\%，角色创建速度提升30\%，技能流量减少30\%。}
 		% \item{符文系统开发。开发符文系统用于修改技能效果，监听事件触发符文效果，修改角色属性等。}
-		\item{\textbf{属性系统开发}。属性系统主要用于服务角色的战斗数值系统，提供一个方便的数值存储和更新机制，减少各个模块之间的耦合。该系统还应用于装备，成就等各类养成模块，非常方便数值的拓展。}
+		\item{\textbf{属性系统开发}。MMO核心的数值系统，通过实现响应式编程的方式实现了一套数值公式系统，并引入推拉模式提高计算性能。系统可应用于角色，装备，成就等各类模块。}
 	\end{cvitems}
 }
 
@@ -85,12 +85,12 @@
 {生死狙击2项目组} % Job title
 {3月~ 2018 - 5月 2019} % Date(s)
 % 什么是ECS， 为什么采用ECS
-{生死狙击2是一款FPS端游，对标PUBG。游戏的客户端和服务器采用Unity3D游戏引擎及采用ECS框架的Entitas进行开发。}
+{生死狙击2是一款FPS端游。游戏的客户端和服务器采用Unity3D游戏引擎及采用ECS框架的Entitas进行开发。}
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {负责角色动画系统的开发和维护。主要内容包括基于Unity3D动画状态机的游戏内部逻辑动画状态机开发和设计,内部状态机支持动画的过渡、融合、切换、打断、支持动画的同步和回放。动画的表现效果基本和吃鸡保持一致。}
+\item {负责角色动画系统的开发和维护。主要内容包括基于Unity3D动画状态机的游戏内部逻辑动画状态机开发和设计,内部状态机支持动画的过渡、融合、切换、打断。支持动画组件的状态同步、动画回放和状态回滚。}
 % 跳跃碰到障碍物处理，跳跃空中按wad轻微添加移动，碰到障碍物处理，斜面检测，自定义算法，检测边缘和台阶。
-\item{负责角色移动模块的开发。移动包括跳跃、站立、趴下、游泳和潜水移动。趴下、潜水和游泳移动使用了自定义的碰撞胶囊体，默认的碰撞胶囊体是朝向y轴，不适合趴下、潜水和游泳情况，实现了自定义的碰撞检测和移动算法，支持碰撞胶囊体朝向x,z轴，能够符合预期移动和旋转。}
+\item{负责角色移动模块的开发。开发移动组件实现移动和跳跃。使用自定义CCD碰撞算法处理趴下、潜水和游泳。}
 % 旋转
 % \item{角色动画骨骼后处理模块。角色左倾和右倾、枪随手旋转而旋转、角色上半身稳定、瞄准对齐。}
 \end{cvitems}
@@ -99,30 +99,44 @@
 
 \cventryproject
 {生死狙击1项目组} % Organization
-{8月~ 2017 - 3月~ 2018} % Location
-{骨骼动画查看器是一款基于开源页游引擎Away3D的AwayBuilder场景编辑器修改而成的动画查看器，支持导入查看DAE骨骼动画、武器和角色绑定、导入查看游戏场景，导入查看游戏粒子特效(基于粒子特效库Flare3D)。该工具极大提高了美术的开发效率。}
+{12月~ 2017 - 3月~ 2018} % Location
+{生死狙击是一款FPS页游。游戏使用Flash的As3开发。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
-		% 
 		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
-		\item {主要工作包括将away3D引擎从默认的左手系改成右手系(含投影矩阵，DAE顶点数据，agal代码等)，修复away3D骨骼动画bug,添加武器和角色绑定、功能场景解析导入(lightmap、遮挡剔除和雾特效)。}
-		% 性能优化，agal 代码缓存
-		\item {负责页游粒子特效库(基于Flare3D)的维护和开发。}
+		\item {骨骼动画查看器。基于开源页游引擎Away3D的AwayBuilder场景编辑器，修改引擎转换到右手坐标系导致的动画资源导入，Agal(Adobe Graphics Assembly Language)shader代码问题。支持页游场景解析导入(lightmap、遮挡剔除和雾特效)。}
+		\item {粒子特效转换工具。编写Unity3D的插件，把AS3粒子特效文件，转化为Unity3D的Prefab文件。主要处理粒子发射器坐标转换(Y->Z轴)、生命周期、UV、Size、SpriteSheet等效果匹配。节省了美术的制作特效的成本。}
 	\end{cvitems}
 }
-%------------------------------------------------    
-\cventryproject
-{生死狙击1项目组} % Organization
-{12月~ 2017 - 1月~ 2018} % Location
-{粒子特效转换工具。支持大部分页游粒子特效转换成Unity3D的粒子特效。节省了美术的制作特效的成本。}
-{ % Description(s) of tasks/responsibilities
-	\begin{cvitems}
-		% 
-		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
-		\item {负责转换工具的开发。主要内容包括页游粒子特效的解析，粒子坐标转换(Flare3D库粒子发射器方向为Y轴，Unity3D粒子发射器方向为Z轴)，粒子生命周期匹配，粒子发射器和发射方向匹配，粒子特效匹配(UV特效，Size特效，SpriteSheet特效等)。}
-		% 性能优化，agal 代码缓存
-	\end{cvitems}
-}
+
+%--------------------------
+
+%\cventryproject
+%{生死狙击1项目组} % Organization
+%{8月~ 2017 - 3月~ 2018} % Location
+%{骨骼动画查看器是一款基于开源页游引擎Away3D的AwayBuilder场景编辑器修改而成的动画查看器，支持导入查看DAE骨骼动画、武器和角色绑定、导入查看游戏场景，导入查看游戏粒子特效(基于粒子特效库Flare3D)。该工具极大提高了美术的开发效率。}
+%{ % Description(s) of tasks/responsibilities
+%	\begin{cvitems}
+%		% 
+%		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
+%		\item {主要工作包括将away3D引擎从默认的左手系改成右手系(含投影矩阵，DAE顶点数据，agal代码等)，修复away3D骨骼动画bug,添加武器和角色绑定、功能场景解析导入(lightmap、遮挡剔除和雾特效)。}
+%		% 性能优化，agal 代码缓存
+%		\item {负责页游粒子特效库(基于Flare3D)的维护和开发。}
+%	\end{cvitems}
+%}
+%%------------------------------------------------    
+%\cventryproject
+%{生死狙击1项目组} % Organization
+%{12月~ 2017 - 1月~ 2018} % Location
+%{粒子特效转换工具。支持大部分页游粒子特效转换成Unity3D的粒子特效。节省了美术的制作特效的成本。}
+%{ % Description(s) of tasks/responsibilities
+%	\begin{cvitems}
+%		% 
+%		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
+%		\item {负责转换工具的开发。主要内容包括页游粒子特效的解析，粒子坐标转换(Flare3D库粒子发射器方向为Y轴，Unity3D粒子发射器方向为Z轴)，粒子生命周期匹配，粒子发射器和发射方向匹配，粒子特效匹配(UV特效，Size特效，SpriteSheet特效等)。}
+%		% 性能优化，agal 代码缓存
+%	\end{cvitems}
+%}
 
 
 %------------------------------------------------
