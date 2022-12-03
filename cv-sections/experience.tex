@@ -16,7 +16,7 @@
 \cventryproject
 {Project SH} % Job title
 {10月~ 2021 - 11月~ 2022} % Date(s)
-{PJSH是一个以现代亚洲都市为背景的开放世界TPS射击游戏。PJSH使用UE4引擎，业务逻辑代码使用C++。本人主要负责战斗系统的开发和维护。}
+{PJSH是一款二次元开放世界TPS射击游戏。PJSH使用UE4引擎，业务逻辑代码使用C++。本人主要负责战斗系统的开发和维护。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
 		% 技能节点类似守望先锋，包含 Entry，Condition，Action 和 State 节点
@@ -28,9 +28,9 @@
 		% Skill Info Context， 队友技能P
 		% 属性系统， add， set， override， 支持add multi，加成P
 		% 技能同步是怎么实现的，有二个版本，第一个是客户端和服务器运行技能图，Simulate 短不会跑整个技能图，对于 Simulate 端，同步的粒度是以节点为颗粒度的。因为 simulate 端不跑技能的执行流，所以执行的时候，服务器还会提供节点执行的上下文信息。
-		\item {\textbf{负责技能系统的开发和维护}。技能系统通过技能图组织整个技能流程。本人主要负责开发和维护技能架构、技能同步、技能节点(超过180个)、Buff系统和属性系统。 }
+		\item {\textbf{负责技能系统的开发和维护}。技能系统使用状态同步，通过技能图组织整个技能流程。本人主要负责开发和维护技能架构、技能同步、技能节点(超过180个)、Buff系统和属性系统。 }
 		% jinja2
-		\item{\textbf{节点自动生成工具}。Python脚本解析节点定义的proto文件，用Jinja2模板语言自动生成Runtime的节点C++代码，主要包括节点类和同步相关代码。其他程序只需要定义proto并实现接口即可添加节点。}
+		\item{\textbf{节点自动生成工具}。使用Python脚本解析节点定义的proto文件，用Jinja2模板语言自动生成Runtime的节点C++代码，主要包括技能节点类和相关同步代码。其他程序只需要定义proto并实现接口即可添加节点。}
 		% 旋转
 		% 优化， FVarint 优化
 		% 内存优化， 注册 Delegate，存放在技能组件里，大部分情况都是用不到，使用 Module，能够动态加载
@@ -51,7 +51,7 @@
 \cventryproject
 {F工作室H69} % Job title
 {6月~ 2019 - 7月~ 2021} % Date(s)
-{光明大陆2是一款北欧神话题材的西方魔幻MMOARPG游戏，服务器使用BigWorld，客户端Neox，脚本Python。本人作为战斗负责人负责游戏战斗模块的开发和维护。}
+{光明大陆2是一款北欧神话题材的西方魔幻MMORPG游戏，服务器使用BigWorld，客户端Neox，脚本Python。本人作为战斗负责人负责游戏战斗模块的开发和维护。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
 		\item {\textbf{负责技能系统的开发和维护}。技能系统用类似蓝图编辑的方式制作技能节点图。主要开发了技能图架构、技能同步、符文系统，开发和维护技能Buff、状态互斥等。策划使用这套技能系统配置了超过\textbf{1500}个技能，能满足策划大部分技能配置需求。}
@@ -60,7 +60,7 @@
 		% 旋转
 		%\item{技能性能优化。对技能性能进行性能优化，流量优化，手感优化。技能系统和未优化前相比，技能系统整体性能提升20\%，角色创建速度提升30\%，技能流量减少30\%。}
 		% \item{符文系统开发。开发符文系统用于修改技能效果，监听事件触发符文效果，修改角色属性等。}
-		\item{\textbf{属性系统开发}。MMO核心的数值系统，通过实现响应式编程的方式实现了一套数值公式系统，并引入推拉模式提高计算性能。系统可应用于角色，装备，成就等各类模块。}
+		\item{\textbf{属性系统开发}。作为MMO核心的数值系统，通过实现响应式编程的方式实现了一套数值公式系统，并引入推拉模式提高计算性能。系统可应用于角色，装备，成就，符文等各类和数值相关模块。}
 	\end{cvitems}
 }
 
@@ -88,9 +88,9 @@
 {生死狙击2是一款FPS端游。游戏的客户端和服务器采用Unity3D游戏引擎及采用ECS框架的Entitas进行开发。}
 { % Description(s) of tasks/responsibilities
 \begin{cvitems}
-\item {负责角色动画系统的开发和维护。主要内容包括基于Unity3D动画状态机的游戏内部逻辑动画状态机开发和设计,内部状态机支持动画的过渡、融合、切换、打断。支持动画组件的状态同步、动画回放和状态回滚。}
+\item {负责角色动画系统的开发和维护。主要内容包括基于Unity3D动画状态机的类似的逻辑动画状态机开发和设计,逻辑动画状态机支持状态的过渡、融合、切换、打断。支持动画组件的状态同步、动画回放和状态回滚。}
 % 跳跃碰到障碍物处理，跳跃空中按wad轻微添加移动，碰到障碍物处理，斜面检测，自定义算法，检测边缘和台阶。
-\item{负责角色移动模块的开发。开发移动组件实现移动和跳跃。使用自定义CCD碰撞算法处理趴下、潜水和游泳。}
+\item{负责角色移动模块的开发。开发移动系统组件实现移动和跳跃。为了处理碰撞体的旋转使用自定义CCD碰撞算法处理角色趴下、潜水和游泳的移动处理。}
 % 旋转
 % \item{角色动画骨骼后处理模块。角色左倾和右倾、枪随手旋转而旋转、角色上半身稳定、瞄准对齐。}
 \end{cvitems}
@@ -100,12 +100,12 @@
 \cventryproject
 {生死狙击1项目组} % Organization
 {12月~ 2017 - 3月~ 2018} % Location
-{生死狙击是一款FPS页游。游戏使用Flash的As3开发。}
+{生死狙击是一款FPS页游。游戏使用Alternativa3D引擎，Flash的As3语言开发。}
 { % Description(s) of tasks/responsibilities
 	\begin{cvitems}
 		% lightmap diffuse, lighmap, fc =  diffuse.rgb * lightmap.rgb* lightmap.aaa 
-		\item {骨骼动画查看器。基于开源页游引擎Away3D的AwayBuilder场景编辑器，修改引擎转换到右手坐标系导致的动画资源导入，Agal(Adobe Graphics Assembly Language)shader代码问题。支持页游场景解析导入(lightmap、遮挡剔除和雾特效)。}
-		\item {粒子特效转换工具。编写Unity3D的插件，把AS3粒子特效文件转化为Unity3D的Prefab文件。主要处理粒子发射器坐标转换(Y->Z轴)、生命周期、UV、Size、SpriteSheet等效果匹配。节省了美术制作特效的成本。}
+		\item {骨骼动画查看器。基于开源页游引擎Away3D的AwayBuilder场景编辑器二次开发，修改引擎从左手坐标系转换到右手坐标系导致的动画资源导入，Agal(Adobe Graphics Assembly Language)shader代码问题。支持页游场景解析导入(lightmap、遮挡剔除和雾特效)。}
+		\item {粒子特效转换工具。编写Unity3D的插件，把AS3粒子特效文件转化为Unity3D的Prefab文件。主要处理粒子发射器坐标转换(Y->Z轴)、生命周期、UV、Size、SpriteSheet等效果匹配。}
 	\end{cvitems}
 }
 
